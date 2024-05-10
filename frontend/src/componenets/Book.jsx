@@ -37,7 +37,7 @@ const Book = () => {
     setLoading(true);
 
   
-    axios.post('http://localhost:3001/register', { name, email, massage, phone, date, people })
+    axios.post('https://food-website-sand-delta.vercel.app/register', { name, email, massage, phone, date, people })
         .then(result => {
             console.log(result);
 
