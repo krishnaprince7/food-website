@@ -3,16 +3,18 @@ import { FaRegCirclePlay } from "react-icons/fa6";
 import { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-scroll";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-
- 
+import AOS from "aos";
+import "aos/dist/aos.css";
+import ReactPlayer from "react-player";
 
 const Hero = () => {
-
   useEffect(() => {
-    AOS.init({duration:1200});
-  }, [])
+    AOS.init({ duration: 1200 });
+  }, []);
+
+  function videostart() {
+    window.open("https://youtu.be/gwYtykmOMgc?si=ByveyDjhekcSzhci");
+  }
 
   const images = [
     "/images/hero-img.png",
@@ -31,12 +33,17 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, [currentIndex, images.length]);
   return (
-    <div id="home"  data-aos="zoom-in" className="bg-[#EEEEEE] py-6 w-full sm:h-screen ">
+    <div
+      id="home"
+      data-aos="zoom-in"
+      className="bg-[#EEEEEE] py-6 w-full sm:h-screen "
+    >
       <div className=" max-w-[1240px]  mt-36 px-12  pb-5  mx-auto grid md:grid-cols-2  sm:grid-cols-2 grid-cols-1 sm:gap-0  ">
         <div className="flex flex-col sm:order-1 order-2">
           <h2 className="text-[#37373f] font-semibold text-5xl py-3 sm:text-start text-center">
             Enjoy Your Healthy
           </h2>
+
           <h2 className="text-[#37373f] font-semibold text-5xl py-3 sm:text-start text-center">
             Delicious Food
           </h2>
@@ -46,10 +53,21 @@ const Hero = () => {
           </p>
           <div className="flex gap-5 my-4 sm:mx-0 mx-auto  ">
             <li className="list-none bg-red-600  px-2 py-2 sm:py-3 sm:px-8  rounded-3xl text-white cursor-pointer">
-            <Link to='book'   spy={true}  smooth={true} offset={-50} duration={1200}> Book a Table</Link>
-
+              <Link
+                to="book"
+                spy={true}
+                smooth={true}
+                offset={-50}
+                duration={1200}
+              >
+                {" "}
+                Book a Table
+              </Link>
             </li>
-            <div className="flex items-center ">
+            <div
+              onClick={videostart}
+              className="flex cursor-pointer items-center "
+            >
               <FaRegCirclePlay size={35} className="text-red-600" />
               <p className="sm:px-2 px-1  font-semibold ">Watch Video</p>
             </div>
