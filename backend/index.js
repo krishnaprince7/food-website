@@ -8,9 +8,16 @@ const app = express()
 
 app.use(express.json())
 
-app.use(cors())
 
-mongoose.connect("mongodb://127.0.0.1:27017/empolyee");
+app.use(cors(
+    {
+        origin:["https://deploy-mern-lwhq.vercel.app"],
+        methods:["POST","GET"],
+        credentials:true
+    }
+))
+
+mongoose.connect("mongodb+srv://princekrishna5707:krishna123@cluster0.hiikio8.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0");
 
 app.post("/register",(req,res)=>{
     EmployMOdles.create(req.body)
