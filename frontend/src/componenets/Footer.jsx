@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <>
       <div id="contact" className="bg-[#1f1f24] py-6">
-        <div className="max-w-[1240px]  sm:px-12 px-4 py-4 mx-auto  ">
+        <div className="max-w-[1240px]  sm:px-12  py-4 mx-auto  ">
           <div className="grid sm:grid-cols-4 grid-cols-1 sm:gap-4 gap-10 px-4">
             <div className="flex text-white  gap-3">
               <IoLocationSharp size={30} />
