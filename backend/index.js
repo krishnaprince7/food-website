@@ -6,7 +6,7 @@ const EmployMOdles=require("./modles/Employee")
 
 const app = express()
 
-app.use(express.json())
+
 
 
 app.use(cors(
@@ -17,7 +17,12 @@ app.use(cors(
     }
 ))
 
+app.use(express.json())
 mongoose.connect("mongodb+srv://princekrishna5707:krishna123@cluster0.hiikio8.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0");
+
+app.get("/",(req,res)=>{
+    res.json("Hello");
+})
 
 app.post("/register",(req,res)=>{
     EmployMOdles.create(req.body)
