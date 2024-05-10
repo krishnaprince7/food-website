@@ -5,17 +5,14 @@ import { useState } from "react";
 import { Link } from "react-scroll";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import ReactPlayer from "react-player";
+
 
 const Hero = () => {
   useEffect(() => {
     AOS.init({ duration: 1200 });
   }, []);
 
-  function videostart() {
-    window.open("https://youtu.be/gwYtykmOMgc?si=ByveyDjhekcSzhci");
-  }
-
+ 
   const images = [
     "/images/hero-img.png",
     "/images/image_hero_02.png",
@@ -28,7 +25,7 @@ const Hero = () => {
       setCurrentIndex((prevIndex) =>
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
-    }, 2000); // Change slide every 2 seconds
+    }, 2000); 
 
     return () => clearInterval(interval);
   }, [currentIndex, images.length]);
@@ -65,7 +62,7 @@ const Hero = () => {
               </Link>
             </li>
             <div
-              onClick={videostart}
+              onClick={()=>{ window.open("https://youtu.be/gwYtykmOMgc?si=ByveyDjhekcSzhci")}}
               className="flex cursor-pointer items-center "
             >
               <FaRegCirclePlay size={35} className="text-red-600" />
