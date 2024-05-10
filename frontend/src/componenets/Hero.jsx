@@ -45,7 +45,7 @@ const Hero = () => {
             eveniet. Eum quas beatae cumque eum quaerat.
           </p>
           <div className="flex gap-5 my-4 sm:mx-0 mx-auto  ">
-            <li className="list-none bg-red-600  px-1 py-2 sm:py-3 sm:px-8  rounded-3xl text-white cursor-pointer">
+            <li className="list-none bg-red-600  px-2 py-2 sm:py-3 sm:px-8  rounded-3xl text-white cursor-pointer">
             <Link to='book'   spy={true}  smooth={true} offset={-50} duration={1200}> Book a Table</Link>
 
             </li>
