@@ -75,7 +75,7 @@ const Footer = () => {
                       size={20}
                     />
                   </div>
-                  <div className="border border-gray-400 rounded-full px-2 py-2 cursor-pointer2">
+                  <div className="border border-gray-400 rounded-full px-2 py-2 cursor-pointer">
                     <FaFacebook
                       onClick={() => {
                         window.open(
