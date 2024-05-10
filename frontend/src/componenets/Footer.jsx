@@ -15,7 +15,7 @@ const Footer = () => {
     <>
 
     <div id="contact" className="bg-[#1f1f24] py-6">
-      <div className="max-w-[1240px]  sm:px-12 px-4 py-4 mx-auto  ">
+      <div className="max-w-[1240px]  sm:px-12  py-4 mx-auto  ">
         <div className="grid sm:grid-cols-4 grid-cols-1 sm:gap-4 gap-10 px-4">
           <div className="flex text-white  gap-3">
             <IoLocationSharp size={30} />
@@ -44,22 +44,26 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex text-white  gap-3">
-            <IoLocationSharp size={30} />
-            <div className="flex flex-col gap-2">
-              <h1 className="text-[17px] font-bold">Follow Us</h1>
-              <div className="flex gap-3">
-                <div className="border border-gray-400 rounded-full px-2 py-2">
-                  <IoLogoLinkedin size={20} />
+         <div className="flex gap-3">
+                <div  className="border border-gray-400 rounded-full px-2 py-2 cursor-pointer">
+                  <IoLogoLinkedin onClick={()=>{
+              window.open("https://www.linkedin.com/in/krishna-vishwakarma-485267291?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app")
+            }} size={20} />
                 </div>
-                <div className="border border-gray-400 rounded-full px-2 py-2">
-                  <FaInstagram size={20} />
+                <div className="border border-gray-400 rounded-full px-2 py-2 cursor-pointer">
+                  <FaInstagram onClick={()=>{
+              window.open("https://www.instagram.com/_princekrishna?igsh=MTcyc3Jkc2E4eGMyeg==")
+            }} size={20} />
                 </div>
-                <div className="border border-gray-400 rounded-full px-2 py-2">
-                  <FaGithub size={20} />
+                <div className="border border-gray-400 rounded-full px-2 py-2 cursor-pointer">
+                  <FaGithub onClick={()=>{
+              window.open("https://github.com/krishnaprince7")
+            }} size={20} />
                 </div>
-                <div className="border border-gray-400 rounded-full px-2 py-2">
-                  <FaFacebook size={20} />
+                <div  className="border border-gray-400 rounded-full px-2 py-2 cursor-pointer2">
+                  <FaFacebook onClick={()=>{
+              window.open("https://www.facebook.com/profile.php?id=100016002570229")
+            }} size={20} />
                 </div>
               </div>
 
